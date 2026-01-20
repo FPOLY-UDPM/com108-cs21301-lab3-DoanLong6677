@@ -38,10 +38,22 @@ int main(){
     // Xử lý, tính toán VÀ Hiển thị kết quả
     if (a == 0)
     {
-        printf("Nghiem x = %f\n", -c/b);
+        if (b == 0){
+            if (c == 0)
+            {
+                printf("Phuong trinh co vo so nghiem");
+            }
+            else
+            {
+                printf("Phuong trinh vo nghiem");
+            }
+        }
+        else {
+            float x = -c/b;
+            printf("Phuong trinh co nghiem x = %.1f", x);
+        }
     }
-    else
-    {
+    else {
         delta = b*b - 4*a*c;
         if (delta < 0)
         {

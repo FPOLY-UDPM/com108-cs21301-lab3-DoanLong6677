@@ -89,7 +89,20 @@ int main(){
 
         if (a1 == 0)
         {
-            printf("Nghiem x = %f\n", -c/b1);
+            if (b1 == 0){
+                if (c == 0)
+                {
+                    printf("Phuong trinh co vo so nghiem\n");
+                }
+                else
+                {
+                    printf("Phuong trinh vo nghiem\n");
+                }
+            }
+            else {
+                float x = -c/b1;
+                printf("Phuong trinh co nghiem x = %.1f\n", x);
+            }
         }
         else
         {
@@ -112,8 +125,7 @@ int main(){
         break;
     case 4:
         // Code cho Bai 3
-        int sokWh;
-        float tienDien;
+        int sokWh, tienDien;
 
         printf("Nhap so kWh tieu thu: ");
         scanf("%d", &sokWh);

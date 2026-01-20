@@ -34,7 +34,7 @@ int main(){
         printf("Hoc luc gioi");
     }
     else if (diem >= 6.5){
-        printf("Hoc luc kha");
+        printf("Hoc luc kha"); 
     }
     else if (diem >= 5){
         printf("Hoc luc trung binh");
