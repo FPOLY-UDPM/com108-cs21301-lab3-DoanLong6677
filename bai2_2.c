@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: Phan Lạc Đoàn Long
+ * MSSV:      PS47837
+ * Lớp:       CS21301
  *****************************************************************************/
 
 //  BÀI 2: XÂY DỰNG CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH  
@@ -20,15 +20,55 @@
 // o X2 = (-b – căn(delta))/(2*a)
 
 #include <stdio.h>
+#include <math.h>
 
 int main(){
     
     // Khai báo biến
-
+    float a, b, c, delta;
 
     // Nhập dữ liệu
-
+    printf("Nhap a: ");
+    scanf("%f", &a);
+    printf("Nhap b: ");
+    scanf("%f", &b);
+    printf("Nhap c: ");
+    scanf("%f", &c);
 
     // Xử lý, tính toán VÀ Hiển thị kết quả
-
+    if (a == 0)
+    {
+        if (b == 0){
+            if (c == 0)
+            {
+                printf("Phuong trinh co vo so nghiem");
+            }
+            else
+            {
+                printf("Phuong trinh vo nghiem");
+            }
+        }
+        else {
+            float x = -c/b;
+            printf("Phuong trinh co nghiem x = %.1f", x);
+        }
+    }
+    else {
+        delta = b*b - 4*a*c;
+        if (delta < 0)
+        {
+            printf("Phuong trinh vo nghiem\n");
+        }
+        else if (delta == 0)
+        {
+            printf("Phuong trinh co nghiem kep x1 = x2 = %f\n", -b/(2*a));
+        }
+        else
+        {
+            printf("Phuong trinh co 2 nghiem phan biet:\n");
+            printf("x1 = %.1f\n", (-b + sqrt(delta))/(2*a));
+            printf("x2 = %.1f\n", (-b - sqrt(delta))/(2*a));
+        }
+    }
+    return 0;
 }
