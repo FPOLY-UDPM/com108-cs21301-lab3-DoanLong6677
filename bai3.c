@@ -13,8 +13,7 @@
 int main(){
     
     // Khai báo biến
-    int sokWh;
-    float tienDien;
+    int sokWh, tienDien;
 
     // Nhập dữ liệu
     printf("Nhap so kWh tieu thu: ");
